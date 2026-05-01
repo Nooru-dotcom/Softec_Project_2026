@@ -1,0 +1,13 @@
+{
+  "name": "FairGig",
+  "short_name": "FairGig",
+  "description": "Fair gig-worker rights platform",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#090d14",
+  "theme_color": "#1de9c3",
+  "icons": [
+    { "src": "/icon.svg", "sizes": "192x192", "type": "image/svg+xml" },
+    { "src": "/icon.svg", "sizes": "512x512", "type": "image/svg+xml" }
+  ]
+}

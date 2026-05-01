@@ -1,0 +1,44 @@
+{
+  "info": {
+    "name": "FairGig APIs",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Auth Signup",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "url": "http://localhost:8001/auth/signup",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"worker1@fairgig.pk\",\n  \"password\": \"Password123!\",\n  \"full_name\": \"Ali Raza\",\n  \"city\": \"Lahore\",\n  \"role\": \"worker\"\n}"
+        }
+      }
+    },
+    {
+      "name": "Anomaly Detect",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "url": "http://localhost:8003/detect-anomalies",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"worker_id\": \"worker_1\",\n  \"history\": [\n    {\"date\": \"2026-04-01\", \"platform\": \"Careem\", \"gross\": 4200, \"deductions\": 980, \"net\": 3220, \"hours\": 9},\n    {\"date\": \"2026-04-02\", \"platform\": \"Careem\", \"gross\": 3900, \"deductions\": 1300, \"net\": 2600, \"hours\": 9}\n  ]\n}"
+        }
+      }
+    },
+    {
+      "name": "Create Grievance",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "url": "http://localhost:8006/grievances",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Unexpected commission hike\",\n  \"description\": \"Bykea reduced payout unexpectedly this week.\",\n  \"city\": \"Karachi\",\n  \"platform\": \"Bykea\",\n  \"anonymous\": true\n}"
+        }
+      }
+    }
+  ]
+}
